@@ -71,7 +71,7 @@ def get_last_boot():
     return str(as_local(utc_from_timestamp(psutil.boot_time())).isoformat())
 
 def on_message(client, userdata, message):
-    print (f"Message received: {message.payload.decode()}"  )
+#    print (f"Message received: {message.payload.decode()}"  )
     if(message.payload.decode() == "online"):
         send_config_message(client)
     
